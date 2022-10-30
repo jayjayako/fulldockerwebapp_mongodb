@@ -5,7 +5,7 @@ services:
     image: mongo:4.2
     # environment:
     #   - MONGO_INITDB_ROOT_USERNAME=root
-    #   - MONGO_INITDB_ROOT_PASSWORD=napakaangas
+    #   - MONGO_INITDB_ROOT_PASSWORD=secret
     restart: unless-stopped
     volumes:
       - ./data/db:/data/db
