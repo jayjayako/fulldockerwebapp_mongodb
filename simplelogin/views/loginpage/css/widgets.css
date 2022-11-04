@@ -40,4 +40,10 @@ input[type="password"] {
   background-color: rgb(192, 54, 54);
   color: white;
 }
+.buttonlink {
+  background-color: transparent;
+  text-decoration: underline;
+  border: none;
+  outline: none;
+}
 /* /////////////////////////////////// */

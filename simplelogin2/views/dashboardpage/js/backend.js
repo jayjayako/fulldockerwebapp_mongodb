@@ -23,9 +23,9 @@ async function dashboard() {
     if (myresult[0].id == "invalid") {
       location.replace("../loginpage");
     } else {
-      document.getElementById(
-        "titleid"
-      ).innerHTML = `Welcome ${myresult[0].name}`;
+      let name = document.getElementById("titleid").innerHTML;
+      let output = eval("`" + name.toString() + "`");
+      document.getElementById("titleid").innerHTML = output;
     }
     errortimeout = 0;
   } catch (error) {

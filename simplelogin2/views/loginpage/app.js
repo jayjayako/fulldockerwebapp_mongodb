@@ -1,5 +1,4 @@
 ///////////// important js libraries ////////////
-loadalljavascript("js/libraries/includehtml.js");
 loadalljavascript("js/libraries/axios.js");
 /////////////////////////////////////////////////
 
@@ -9,6 +8,6 @@ loadallcss("css/loginpage.css");
 loadallcss("css/widgets.css");
 /////////////////////////////////////////////////
 /////////////////// js here /////////////////////
-loadalljavascript("js/navigation.js");
-loadalljavascript("js/backendscript.js");
+loadalljavascript("js/backend.js");
+loadalljavascript("routing.js");
 /////////////////////////////////////////////////

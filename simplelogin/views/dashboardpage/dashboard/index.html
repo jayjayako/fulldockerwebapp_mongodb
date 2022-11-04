@@ -1,7 +1,10 @@
-<div class="fullwidth fullheight">
+<script src="../js/libraries/htmlinclude.js"></script>
+<div id="dashboardid" class="fullwidth fullheight">
   <div class="flexbox">
     <h2 class="fullwidth textaligncenter">Dashboard</h2>
-    <h2 class="textalignleft fullwidth" id="titleid">Welcome name</h2>
+    <h2 class="textalignleft fullwidth" id="titleid">
+      Welcome ${myresult[0].name}
+    </h2>
     <div class="dashboard-content1">
       <button onclick="logout()" class="button1">Logout</button>
     </div>
