@@ -3,6 +3,10 @@ var errortimeout = 0;
 //////////////// for socket connection /////////////////
 const socket = io();
 
+socket.on("connect", () => {
+  dashboard();
+});
+
 socket.on("chat-message", msg => {
   console.log(msg);
 });
@@ -33,7 +37,7 @@ async function dashboard() {
     if (errortimeout >= 5) {
       alert("Opps Network Error!");
     } else {
-      setTimeout(dashboard, 300);
+      setTimeout(dashboard, 1000);
     }
   }
 }

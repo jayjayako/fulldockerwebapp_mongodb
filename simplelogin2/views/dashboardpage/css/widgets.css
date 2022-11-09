@@ -4,6 +4,10 @@ fieldset {
   border: 2px solid black;
 }
 
+.margin1 {
+  padding: 12px 20px;
+}
+
 /* //////// all textbox design //////// */
 input[type="text"] {
   border-radius: 10px;
@@ -35,5 +39,11 @@ input[type="password"] {
 .button1:hover {
   background-color: rgb(192, 54, 54);
   color: white;
+}
+.buttonlink {
+  background-color: transparent;
+  text-decoration: underline;
+  border: none;
+  outline: none;
 }
 /* /////////////////////////////////// */

@@ -24,7 +24,7 @@ mongoose
   .then(() => {
     console.log("DB Connetion Successfully");
   })
-  .catch((err) => {
+  .catch(err => {
     console.log(err.message);
   });
 
@@ -40,21 +40,21 @@ const port = 3000;
 
 const io = require("socket.io")(server, { cors: { origin: "*" } });
 
-server.listen(port, (err) => {
+server.listen(port, err => {
   if (err) {
     return console.log("ERROR", err);
   }
   console.log(`Listening on port...${port}`);
 });
 
-const wrap = (middleware) => (socket, next) =>
+const wrap = middleware => (socket, next) =>
   middleware(socket.request, {}, next);
 io.use(wrap(sessionMiddleware));
 
 var { iofunc } = require("./socketauth/ioinside.js");
 iofunc(io);
 var { socketfunct } = require("./extrasocket/socketinside.js");
-io.on("connection", (socket) => {
+io.on("connection", socket => {
   console.log("this is from express " + socket.request.session.authenticated);
   socketfunct(socket);
   app.socket = socket.on("disconnect", () => {

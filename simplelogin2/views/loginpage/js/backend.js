@@ -68,3 +68,12 @@ async function checkuser() {
     }
   }
 }
+
+checkuser();
+
+async function readlogin() {
+  document.getElementById("usernamevar").value =
+    document.getElementById("username").value;
+  document.getElementById("passwordvar").value =
+    document.getElementById("password").value;
+}
